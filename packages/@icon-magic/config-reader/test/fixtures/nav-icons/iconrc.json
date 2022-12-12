@@ -1,0 +1,35 @@
+{
+  "iconPath": "*",
+  "variants": [
+    {
+      "path": "./filled.svg"
+    },
+    {
+      "name": "someOtherName",
+      "path": "./outline.svg",
+      "colorScheme": "dark"
+    }
+  ],
+  "sizes": [24],
+  "resolutions": [1],
+  "build": {
+    "outputPath": "./out"
+  },
+  "generate": {
+    "outputPath": "./out",
+    "types": [
+      {
+        "name": "svg",
+        "plugins": []
+      },
+      {
+        "name": "customElement",
+        "plugins": []
+      },
+      {
+        "name": "raster",
+        "plugins": []
+      }
+    ]
+  }
+}

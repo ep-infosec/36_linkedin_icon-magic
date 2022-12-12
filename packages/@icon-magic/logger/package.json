@@ -1,0 +1,21 @@
+{
+  "name": "@icon-magic/logger",
+  "version": "2.3.0-beta.0",
+  "description": "Icon magic logger package.",
+  "main": "dist/src/index.js",
+  "author": "Ramitha Chitloor <rchitloor@linkedin.com>",
+  "license": "BSD-2-Clause",
+  "private": false,
+  "scripts": {
+    "start": "yarn run watch",
+    "watch": "watch 'yarn run test' './src' './test' --wait=1",
+    "pretest": "yarn run build & yarn run lint",
+    "test": "mocha --opts test/mocha.opts dist/test",
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc -p tsconfig.json",
+    "lint": "tslint -t msbuild --project . -c tslint.json --fix"
+  },
+  "dependencies": {
+    "winston": "^3.2.1"
+  }
+}

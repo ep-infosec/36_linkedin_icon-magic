@@ -1,0 +1,31 @@
+{
+  "name": "icon-magic",
+  "private": true,
+  "workspaces": [
+    "packages/@icon-magic/*"
+  ],
+  "version": "0.0.1",
+  "description": "Automated icon build system for iOS, Android and Web.",
+  "main": "dist/index.js",
+  "repository": "git@github.com:amiller-gh/icon-magic.git",
+  "author": "Adam Miller <ammiller@linkedin.com>",
+  "license": "BSD-2-Clause",
+  "scripts": {
+    "prepare": "lerna run build",
+    "build": "lerna run build",
+    "test": "lerna run test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^12.7.2",
+    "lerna": "^4.0.0",
+    "mocha": "^7.2.0",
+    "mocha-typescript": "^1.1.17",
+    "source-map-support": "^0.5.6",
+    "typescript": "^4.3.5",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {
+    "tslint": "^6.1.2"
+  }
+}

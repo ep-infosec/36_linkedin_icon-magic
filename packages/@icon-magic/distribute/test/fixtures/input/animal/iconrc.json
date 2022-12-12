@@ -1,0 +1,58 @@
+{
+  "iconName": "animal",
+  "variants": [
+    {
+      "name": "small",
+      "path": "./small.svg"
+    },
+    {
+      "name": "large",
+      "path": "./large.svg"
+    }
+  ],
+  "category": "its-ui",
+  "iconPath": ".",
+  "flavors": [
+    {
+      "name": "small",
+      "path": "./small.svg",
+      "types": {
+        "svg": {
+          "name": "small",
+          "path": "./small.svg"
+        },
+        "customElement": {
+          "name": "small",
+          "path": "./small.js"
+        }
+      }
+    },
+    {
+      "name": "large",
+      "path": "./large.svg",
+      "types": {
+        "svg": {
+          "name": "large",
+          "path": "./large.svg"
+        },
+        "customElement": {
+          "name": "large",
+          "path": "./large.js"
+        }
+      }
+    }
+  ],
+  "distribute": {
+    "svg": {
+      "toSprite": true,
+      "spriteNames": [
+        "test-icons"
+      ]
+    }
+  },
+  "generatedMetadata": {
+    "customElement": {
+      "namePrefix": "test-prefix-"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@icon-magic/imagemin-farm",
+  "version": "2.7.0-beta.0",
+  "description": "Icon magic image minification farm.",
+  "main": "dist/src/index.js",
+  "author": "Adam Miller <adam@pages.me>",
+  "license": "BSD-2-Clause",
+  "private": false,
+  "scripts": {
+    "start": "yarn run watch",
+    "watch": "watch 'yarn run test' './src' './test' --wait=1",
+    "pretest": "yarn run build & yarn run lint",
+    "test": "mocha --opts test/mocha.opts dist/test",
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc -p tsconfig.json",
+    "postbuild": "cp -r ./test/fixtures ./dist/test",
+    "lint": "tslint -t msbuild --project . -c tslint.json",
+    "lintfix": "tslint -t msbuild --project . -c tslint.json --fix"
+  },
+  "dependencies": {
+    "@icon-magic/logger": "^2.3.0-beta.0",
+    "imagemin": "^7.0.0",
+    "imagemin-advpng": "^6.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-pngcrush": "^6.0.0",
+    "imagemin-zopfli": "^7.0.0"
+  }
+}

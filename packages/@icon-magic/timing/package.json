@@ -1,0 +1,23 @@
+{
+  "name": "@icon-magic/timing",
+  "version": "2.0.1-beta.0",
+  "description": "Icon magic timing package.",
+  "main": "dist/src/index.js",
+  "author": "Omayeli Arenyeka <aomayeli@gmail.com>",
+  "license": "BSD-2-Clause",
+  "private": false,
+  "scripts": {
+    "start": "yarn run watch",
+    "watch": "watch 'yarn run test' './src' './test' --wait=1",
+    "pretest": "yarn run build & yarn run lint",
+    "test": "mocha --opts test/mocha.opts dist/test",
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc -p tsconfig.json",
+    "lint": "tslint -t msbuild --project . -c tslint.json",
+    "lintfix": "tslint -t msbuild --project . -c tslint.json --fix"
+  },
+  "dependencies": {
+    "@types/pretty-time": "^1.1.0",
+    "pretty-time": "^1.1.0"
+  }
+}
